@@ -1,0 +1,157 @@
+:root {
+/* COLORS */
+	--btn-color: rgb(90, 160, 55);
+
+/* BORDERS */
+	--laptop-sim-border: 1px dashed black;
+
+/* SHADOWS */
+	--form-shadow-bottom: 0px 5px 5px 0px rgb(0, 0, 0, 0.2);
+	--form-shadow-top: 0px -2px 1px 0px rgb(0, 0, 0, 0.1);
+
+	--input-shadow: 3px 5px 5px rgb(15, 15, 15, 0.3);
+	--input-shadow-focused: 3px 5px 5px rgb(0, 10, 180, 0.4);
+	--valid-input-shadow: 3px 5px 2px rgb(0, 180, 10, 0.4);
+	--invalid-input-shadow: 3px 5px 2px rgb(180, 0, 10, 0.4);
+
+	--btn-shadow: 3px 5px 2px rgb(15, 15, 15, 0.5);
+}
+
+* {
+	box-sizing: border-box;
+	line-height: 1.5rem;
+}
+
+/* BODY DIV ELEMENT */
+body {
+	height: 76vh;  
+	overflow-y: auto;   
+	margin: 0px;      
+}
+
+/* ROOT DIV ELEMENT */
+#root {
+	border: var(--laptop-sim-border);
+	display: flex;
+	/* LEFT SIDE CONTAINER (LOGO) */
+	& > :nth-child(1) {
+		background: url(form-pic.jpg) no-repeat center/cover;
+		flex: 0.4;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	  /* RIGHT SIDE CONTAINER (FORM) */
+	& > :nth-child(2) {
+		flex: 1;
+		padding: 5rem 0rem;
+	}
+}
+
+/* LOGO CONTAINER */
+#logo {
+	background-color: black;
+	opacity: 50%;
+	height: 5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+}
+
+/* LOGO TEXT & CONTENT STYLING */
+#logo > * {
+	color: white;
+	text-align: center;
+}
+
+/*FORM HERO CONTAINER*/
+#form-hero-container {
+	padding-left: 2rem;
+}
+
+/*FORM BLOCK */
+#form-block {
+}
+
+/* FORM */
+form {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding-left: 2rem;
+	box-shadow: var(--form-shadow-top),
+				var(--form-shadow-bottom);
+}
+
+fieldset {
+	display: flex;
+	justify-content: space-between;
+	border: none;
+}
+
+.form-group {
+}
+
+label {
+	display: block;
+}
+
+input {
+	margin-bottom: 1.5rem;
+	width: 15rem;
+	height: 2rem;
+	font-size: 1.2rem;
+	box-shadow: var(--input-shadow)
+}
+
+input:focus	{
+	box-shadow: var(--input-shadow-focused);
+}
+
+input:valid {
+	box-shadow: var(--valid-input-shadow);
+}
+
+form.submitted input:invalid {
+	box-shadow: var(--invaid-input-shadow);
+}
+
+/*BELOW FORM, THE ACTION DIV*/
+
+#action-div {
+	padding: 2rem 2rem;
+}
+
+#action-div > button {
+	background-color: var(--btn-color);
+	padding: 0.8rem;
+	width: 10rem;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+	font-weight: bold;
+	box-shadow: var(--btn-shadow);
+	opacity: 95%;
+}
+
+#action-div > button:active {
+	opacity: 100%;
+}
+
+#action-div > button:hover	{
+	transform: translate(2px, 1px);
+	transition: transform 0.3s ease;
+	box-shadow: 2px 1px 0.2px rgb(15, 15, 15, 0.5);
+}
+
+#action-div >  p {
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	& > a {
+		text-decoration: none;
+	}
+}

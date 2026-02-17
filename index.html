@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+	<div id="root">
+		<div id="left-display">
+			<div id="logo">
+				<h3>Hello World</h1>
+			</div>
+		</div>
+		<div id="right-display">
+		  <div id="form-hero-container">
+			<h1>Acadryx Signup Form</h1>
+			<p>
+				Welcome to Acadryx. We're excited to have you on board. Whether you're a teacher streamlining results or a student sharing your voice through the magazine, this is your space. Fill in the details below to get started—and if you ever need help, Kiki is just a wave away.
+			</p>
+		  </div>
+			<form id="beautiful-form" action="" method="">
+			  <h2>Let's Get Started!</h2>
+			  <fieldset>
+			   <div class="form-group">
+				<label for="first-name">FIRST NAME</label>
+				<input name="firstName" id="first-name" type="text" required>
+			   </div>
+			   <div class="form-group">
+				<label for="last-name">LAST NAME</label>
+				<input name="lastName" id="last-name" type="text" required>
+			   </div>
+			  </fieldset>
+			  <fieldset>
+			   <div class="form-group">
+				<label for="email">EMAIL</label>
+				<input name="userEmail" id="email" type="email" placeholder="example@gamil.com" required>
+			   </div>
+			   <div class="form-group">
+				<label for="phone-number">PHONE NUMBER</label>
+				<input name="phoneNumber" id="phone-number" type="number" placeholder="e.g. 08129735338" required>
+			   </div>
+			  </fieldset>
+			  <fieldset id="password-field">
+			   <div class="form-group">
+				<label for="password" >PASSWORD</label>
+				<input name="password" id="password" type="password" required>
+			   </div>
+			   <div class="form-group">
+				<label for="confirm-password">CONFIRM PASSWORD</label>
+				<input name="confirmPassword" id="confirm-password" type="password" required>
+			   </div>
+			  </fieldset>
+			</form>
+			<div id="action-div">
+				<button form="beautiful-form">Create Account</button>
+				<p>Already have an account? <a href="">Log in</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
